@@ -1,7 +1,21 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+#include <future>   // Do wielowatkowosci
+#include <chrono>   // Do mierzenia czasu/pauz
+#include <vector>
 #include "OllamaClient.h"
+
+// Funkcja pomocnicza do animacji ładowania
+void playLoadingAnimation(std::future<std::string>& future) {
+    const std::vector<char> animation = {'|', '/', '-', '\\'};
+    int i = 0;
+    // Dopóki wynik z drugiego wątku nie jest gotowy
+    while (future.wait_for(std::chrono::milliseconds(100)) != std::future_status::ready) {
+        std::cout << "\rBielik mysli... " << animation[i++ % 4] << std::flush;
+    }
+    std::cout << "\r" << std::string(20, ' ') << "\r"; // Czyszczenie linii animacji
+}
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
@@ -14,46 +28,57 @@ int main() {
     std::string systemPrompt;
     
     std::cout << "===============================================" << std::endl;
-    std::cout << "                 Redaktor Tekstu               " << std::endl;
+    std::cout << "     REDAKTOR AI Z OBSLUGA WIELOWATKOWOSCI     " << std::endl;
     std::cout << "===============================================" << std::endl;
 
     while (true) {
-        std::cout << "\nWYBIERZ TYP ODPOWIEDZI:" << std::endl;
-        std::cout << "1. Książka dla dzieci" << std::endl;
-        std::cout << "2. Slang mlodziezowy" << std::endl;
-        std::cout << "3. Konkretne streszczenie" << std::endl;
-        std::cout << "Wpisz 'koniec', aby wyjsc." << std::endl;
-        
-        std::cout << "\nTwoj wybor: ";
+        std::cout << "\nWYBIERZ TRYB REDAKCJI (1-3) lub 'koniec': ";
         std::getline(std::cin, choice);
 
         if (choice == "koniec") break;
 
         if (choice == "1") {
-            systemPrompt = "Jesteś redaktorem i przeredaguj ten tekst na zrozumiały dla małego dziecka. Używaj prostych słów i przykładów, jakbyś pisał ksiązkę dla dzieci.";
+            systemPrompt = "Zredaguj tekst, aby byl jasny i prosty.";
         } else if (choice == "2") {
-            systemPrompt = "Jesteś kumplem z podwórka. Przeredaguj ten tekst na slang młodzieżowy, ma być to formułka która będzie krótka i zawierała słowa zrozumiałe dla młodzieży. Używaj popularnych zwrotów i skrótów";
+            systemPrompt = "Zredaguj tekst w stylu mlodziezowym (rel, sigma).";
         } else if (choice == "3") {
-            systemPrompt = "jesteś asystentem naukowym. Streszcz ten tekst w kilku zdaniach, zachowując najważniejsze informacje i terminy.";
+            systemPrompt = "Zrob profesjonalna korekte i streszczenie w punktach.";
         } else {
             continue;
         }
 
-        std::cout << "\nWKLEJ TEKST NAUKOWY DO ANALIZY:\n";
+        std::cout << ">>> WKLEJ TEKST: ";
         std::getline(std::cin, textToProcess);
-        
-        // Tu zaczynamy historie rozmowy od wklejonego tekstu
-        std::string chatHistory = "Oto tekst naukowy do analizy: " + textToProcess;
-        
-        std::cout << "\n[Bielik analizuje...]\n";
-        std::string response = client.sendRequest(systemPrompt, chatHistory);
-        chatHistory += "\nAsystent: " + response;
+        if (textToProcess.empty()) continue;
 
-        std::cout << "\nBIELIK: " << response << std::endl;
+        std::string chatHistory = "Tekst: " + textToProcess;
 
-        // PĘTLA DOPYTYWANIA
+        // PĘTLA KONWERSACJI
         while (true) {
-            std::cout << "\n(Zadaj pytanie do tematu lub wpisz 'nowy', aby zmienic tekst, wpisz 'koniec', aby wyjsc): ";
+            // --- OBSŁUGA WYJĄTKÓW I WIELOWĄTKOWOŚĆ ---
+            try {
+                // Uruchamiamy zapytanie w osobnym watku (std::async)
+                std::future<std::string> futureResponse = std::async(std::launch::async, [&]() {
+                    return client.sendRequest(systemPrompt, chatHistory);
+                });
+
+                // W glownym watku puszczamy animacje
+                playLoadingAnimation(futureResponse);
+
+                // Pobieramy wynik (jesli wystapil blad w watku, get() go wyrzuci)
+                std::string response = futureResponse.get();
+
+                chatHistory += "\nAsystent: " + response;
+                std::cout << "\nBIELIK:\n" << response << "\n" << std::string(30, '-') << std::endl;
+
+            } catch (const std::exception& e) {
+                // To wyłapie błędy sieciowe, błędy JSONa, wyłączoną Ollamę itp.
+                std::cerr << "\n[BLAD KRYTYCZNY]: " << e.what() << std::endl;
+                std::cerr << "Upewnij sie, ze Ollama jest wlaczona i sprobuj ponownie." << std::endl;
+                break; // Powrót do menu głównego przy błędzie
+            }
+
+            std::cout << "\n(Popraw/dopytaj lub wpisz 'nowy'): ";
             std::string followUp;
             std::getline(std::cin, followUp);
 
@@ -61,15 +86,7 @@ int main() {
             if (followUp == "koniec") return 0;
 
             chatHistory += "\nUzytkownik: " + followUp;
-            
-            std::cout << "\nBielik mysli... ";
-            response = client.sendRequest(systemPrompt, chatHistory);
-            chatHistory += "\nAsystent: " + response;
-
-            std::cout << "\nBIELIK: " << response << std::endl;
-            std::cout << "-----------------------------------" << std::endl;
         }
     }
-
     return 0;
 }
