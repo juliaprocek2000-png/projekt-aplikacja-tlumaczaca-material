@@ -1,0 +1,3 @@
+C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/TlumaczPojec.dir
+C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/edit_cache.dir
+C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/rebuild_cache.dir

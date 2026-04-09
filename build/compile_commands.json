@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Julia\\Desktop\\projekt-aplikacja-tlumaczaca-material\\include -external:IC:\\Users\\Julia\\Desktop\\projekt-aplikacja-tlumaczaca-material\\vcpkg\\installed\\x64-windows\\include -external:W0 /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /FoCMakeFiles\\TlumaczPojec.dir\\src\\main.cpp.obj /FdCMakeFiles\\TlumaczPojec.dir\\ /FS -c C:\\Users\\Julia\\Desktop\\projekt-aplikacja-tlumaczaca-material\\src\\main.cpp",
+  "file": "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/src/main.cpp",
+  "output": "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build",
+  "command": "C:\\PROGRA~1\\MIB055~1\\18\\COMMUN~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -IC:\\Users\\Julia\\Desktop\\projekt-aplikacja-tlumaczaca-material\\include -external:IC:\\Users\\Julia\\Desktop\\projekt-aplikacja-tlumaczaca-material\\vcpkg\\installed\\x64-windows\\include -external:W0 /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /FoCMakeFiles\\TlumaczPojec.dir\\src\\OllamaClient.cpp.obj /FdCMakeFiles\\TlumaczPojec.dir\\ /FS -c C:\\Users\\Julia\\Desktop\\projekt-aplikacja-tlumaczaca-material\\src\\OllamaClient.cpp",
+  "file": "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/src/OllamaClient.cpp",
+  "output": "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/TlumaczPojec.dir/src/OllamaClient.cpp.obj"
+}
+]
