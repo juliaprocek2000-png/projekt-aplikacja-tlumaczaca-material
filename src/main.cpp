@@ -28,7 +28,7 @@ int main() {
     std::string systemPrompt;
     
     std::cout << "===============================================" << std::endl;
-    std::cout << "     REDAKTOR AI Z OBSLUGA WIELOWATKOWOSCI     " << std::endl;
+    std::cout << "                  REDAKTOR AI                  " << std::endl;
     std::cout << "===============================================" << std::endl;
 
     while (true) {
@@ -38,9 +38,9 @@ int main() {
         if (choice == "koniec") break;
 
         if (choice == "1") {
-            systemPrompt = "Zredaguj tekst, aby byl jasny i prosty.";
+            systemPrompt = "Zredaguj tekst, aby byl jasny i prosty dla dziecka w przedszkolu, nie dodawaj żadnych innych informacji tylko zredaguj tekst tak aby mogł się np. pojawić w książce dla dzieci, nie tłumacz tylko przepisz językiem zrozumiałym dla dzieci .";
         } else if (choice == "2") {
-            systemPrompt = "Zredaguj tekst w stylu mlodziezowym (rel, sigma).";
+            systemPrompt = "Zredaguj tekst w stylu mlodziezowym (rel, sigma). Nie dodawaj zadnych innych informacji tylko zredaguj tekst tak aby była to nadal formułka ale tylko napisana w stylu mlodziezowym, nie tłumacz tylko przepisz językiem zrozumiałym dla dzieci.";
         } else if (choice == "3") {
             systemPrompt = "Zrob profesjonalna korekte i streszczenie w punktach.";
         } else {

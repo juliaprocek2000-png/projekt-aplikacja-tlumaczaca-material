@@ -1,24 +1,4 @@
 # ninja log v6
-7	368	7974336904381596	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-30	1852	7974337522728714	CMakeFiles/TlumaczPojec.dir/src/OllamaClient.cpp.obj	aeadc113c64e9204
-1855	2736	7974337540976021	TlumaczPojec.exe	a1543f3fd6e6ab9f
-7	363	7974340891614025	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-43	584	7974341275393820	TlumaczPojec.exe	a1543f3fd6e6ab9f
+27	2219	7974380471155365	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
 8	1739	7974343230144166	CMakeFiles/TlumaczPojec.dir/src/OllamaClient.cpp.obj	aeadc113c64e9204
-1740	2277	7974343247430779	TlumaczPojec.exe	a1543f3fd6e6ab9f
-7	572	7974344992269428	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-573	1080	7974344997927513	TlumaczPojec.exe	a1543f3fd6e6ab9f
-9	582	7974347008051111	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-45	532	7974347386676391	TlumaczPojec.exe	a1543f3fd6e6ab9f
-8	558	7974352279566632	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-558	1091	7974352285071099	TlumaczPojec.exe	a1543f3fd6e6ab9f
-8	571	7974354346280713	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-571	1082	7974354351956637	TlumaczPojec.exe	a1543f3fd6e6ab9f
-12	576	7974356583928541	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-577	1098	7974356589618265	TlumaczPojec.exe	a1543f3fd6e6ab9f
-7	854	7974363921101906	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-855	1296	7974363929573643	TlumaczPojec.exe	a1543f3fd6e6ab9f
-12	1008	7974366334754584	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-1009	1856	7974366344718115	TlumaczPojec.exe	a1543f3fd6e6ab9f
-10	1872	7974374226337265	CMakeFiles/TlumaczPojec.dir/src/main.cpp.obj	c4fbfa2186902b37
-1873	2784	7974374244974886	TlumaczPojec.exe	a1543f3fd6e6ab9f
+54	951	7974380740319228	TlumaczPojec.exe	a1543f3fd6e6ab9f
