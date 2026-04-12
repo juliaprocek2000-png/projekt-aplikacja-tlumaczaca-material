@@ -29,91 +29,101 @@ public:
     QLabel *statusLabel;
     QTextEdit *inputEdit;
     QTextEdit *outputEdit;
+    QLabel *label;
+    QLabel *label_2;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
-        MainWindow->setStyleSheet(QString::fromUtf8("/* --- Styl dla g\305\202\303\263wnego okna --- */\n"
+        MainWindow->setStyleSheet(QString::fromUtf8("\n"
 "QMainWindow {\n"
-"    background-color: #2a0a1a; /* Bardzo ciemny, bordowy fiolet */\n"
-"    color: #fce4ec; /* Jasny, pudrowy r\303\263\305\274 dla napis\303\263w */\n"
+"    background-color: #F4EEF0; \n"
 "}\n"
 "\n"
-"/* --- Styl dla p\303\263l tekstowych (input/output) --- */\n"
+"\n"
 "QTextEdit {\n"
-"    background-color: #3e1e2d; /* Ciemny, nasycony r\303\263\305\274owo-bordowy */\n"
-"    color: #fce4ec; /* Jasny, pudrowy r\303\263\305\274 dla tekstu */\n"
-"    border: 1px solid #ff4081; /* Jaskrawy r\303\263\305\274owy brzeg */\n"
+"    background-color: #5D3A42;\n"
+"    color: #F2E9EB;           \n"
+"    border: 1px solid #4A2E35; \n"
 "    border-radius: 8px;\n"
 "    padding: 10px;\n"
-"    selection-background-color: #e91e63; /* Intensywny r\303\263\305\274owy dla zaznaczenia */\n"
-"    selection-color: white;\n"
+"    font-size: 11pt;\n"
 "}\n"
 "\n"
-"/* --- Styl dla przycisku (Zredaguj tekst) --- */\n"
-"QPushButton {\n"
-"    background-color: #ff4081; /* Jaskrawy, nasycony r\303\263\305\274owy */\n"
-"    color: white;\n"
+"\n"
+"QPushButton, QComboBox {\n"
+"    background-color: #A67B88; \n"
+"    color: #FFFFFF;\n"
 "    border: none;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px 20px;\n"
+"    border-radius: 6px;\n"
+"    padding: 10px;\n"
 "    font-weight: bold;\n"
-""
-                        "    min-width: 150px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: #ff80ab; /* Ja\305\233niejszy, pudrowy r\303\263\305\274 po najechaniu */\n"
+"    background-color: #BC95A0; /* Delikatne roz\305\233wietlenie */\n"
 "}\n"
 "\n"
-"QPushButton:pressed {\n"
-"    background-color: #e91e63; /* Ciemniejszy, intensywny r\303\263\305\274owy po klikni\304\231ciu */\n"
+"/* --- Labele (Napisy): Ciemny, zgaszony r\303\263\305\274 --- */\n"
+"QLabel {\n"
+"    color: #7D5A64; \n"
+"    background: transparent;\n"
+"    font-weight: bold;\n"
+"    font-size: 10pt;\n"
 "}\n"
 "\n"
-"/* --- Styl dla listy rozwijanej (styleCombo) --- */\n"
-"QComboBox {\n"
-"    background-color: #3e1e2d; /* Ciemny, nasycony r\303\263\305\274owo-bordowy */\n"
-"    color: #fce4ec; /* Jasny, pudrowy r\303\263\305\274 dla tekstu */\n"
-"    border: 1px solid #ff4081; /* Jaskrawy r\303\263\305\274owy brzeg */\n"
-"    border-radius: 8px;\n"
-"    padding: 8px;\n"
-"}\n"
 "\n"
 "QComboBox QAbstractItemView {\n"
-"    background-color: #3e1e2d; /* Ciemny, nasycony r\303\263\305\274owo-bordowy dla listy */\n"
-"    color: #fce4ec; /* Jasny, pudrowy r\303\263\305\274 dla opcji */\n"
-"    selection-background-color: #e91e63; /* Intensywny r\303\263\305\274owy dla wybranej opcji */\n"
-"    selection-color: white;\n"
-""
-                        "}\n"
-"\n"
-"/* --- Styl dla etykiety statusu --- */\n"
-"QLabel {\n"
-"    color: #ff80ab; /* Pudrowy r\303\263\305\274 dla statusu */\n"
-"    background: transparent;\n"
+"    background-color: #F4EEF0;\n"
+"    selection-background-color: #A67B88;\n"
+"    color: #5D3A42;\n"
 "}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         sendButton = new QPushButton(centralwidget);
         sendButton->setObjectName("sendButton");
-        sendButton->setGeometry(QRect(570, 120, 190, 41));
+        sendButton->setGeometry(QRect(580, 120, 190, 41));
         styleCombo = new QComboBox(centralwidget);
         styleCombo->addItem(QString());
         styleCombo->addItem(QString());
         styleCombo->addItem(QString());
         styleCombo->setObjectName("styleCombo");
-        styleCombo->setGeometry(QRect(20, 120, 138, 41));
+        styleCombo->setGeometry(QRect(30, 120, 201, 41));
+        styleCombo->setStyleSheet(QString::fromUtf8(""));
         statusLabel = new QLabel(centralwidget);
         statusLabel->setObjectName("statusLabel");
         statusLabel->setGeometry(QRect(320, 570, 191, 16));
+        statusLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 128, 171); \n"
+"\n"
+"\n"
+"\n"
+"\n"
+"font-weight: 300;\n"
+"font: 900 11pt \"Arial Black\";"));
         inputEdit = new QTextEdit(centralwidget);
         inputEdit->setObjectName("inputEdit");
-        inputEdit->setGeometry(QRect(20, 170, 741, 192));
+        inputEdit->setGeometry(QRect(30, 170, 741, 192));
         outputEdit = new QTextEdit(centralwidget);
         outputEdit->setObjectName("outputEdit");
-        outputEdit->setGeometry(QRect(20, 370, 741, 192));
+        outputEdit->setGeometry(QRect(30, 370, 741, 192));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(290, 20, 311, 71));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 128, 171); \n"
+"\n"
+"\n"
+"\n"
+"font: 48pt \"Gabriola\";\n"
+"font-weight: 300;"));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(30, 91, 241, 20));
+        label_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 128, 171); \n"
+"font: 900 11pt \"Arial Black\";\n"
+"\n"
+"font-weight: 300;"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -136,16 +146,18 @@ public:
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Wklej tekst do redakcji</p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">Wklej tekst do redakcji</span></p></body></html>", nullptr));
         outputEdit->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Odpowied\305\272 </p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">Odpowied\305\272 </span></p></body></html>", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Redaktor AI", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "wybierz styl odpowiedzi:", nullptr));
     } // retranslateUi
 
 };
