@@ -30,7 +30,7 @@ void MainWindow::handleSend() {
 
     ///jeśli nic nie jest wpisane wyświetla sie napis
     if (textToProcess.isEmpty() || textToProcess == "Wklej tekst do redakcji") {
-        ui->statusLabel->setText("Błąd: Wpisz najpierw tekst!");
+        ui->statusLabel->setText("Błąd!");
         return; 
     }
 

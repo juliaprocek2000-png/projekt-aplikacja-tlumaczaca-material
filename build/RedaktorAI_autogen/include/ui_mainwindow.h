@@ -96,7 +96,7 @@ public:
         styleCombo->setStyleSheet(QString::fromUtf8(""));
         statusLabel = new QLabel(centralwidget);
         statusLabel->setObjectName("statusLabel");
-        statusLabel->setGeometry(QRect(320, 570, 191, 16));
+        statusLabel->setGeometry(QRect(320, 570, 351, 16));
         statusLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 128, 171); \n"
 "\n"
 "\n"
