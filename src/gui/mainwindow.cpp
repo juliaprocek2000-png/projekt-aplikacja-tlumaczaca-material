@@ -46,7 +46,7 @@ void MainWindow::handleSend() {
     if (choice == 0) {
         systemPrompt = "Jesteś edytorem tekstów dla dzieci. Twoim zadaniem jest uproszczenie PONIŻSZEGO tekstu. Nie wymyślaj nowych historii. Jeśli tekst wejściowy jest krótki, Twoja odpowiedź też ma być krótka. Tekst do uproszczenia: ";
     } else if (choice == 1) {
-        systemPrompt = "Przetłumacz poniższy tekst na slang młodzieżowy (używaj słów: rel, sigma, baza, mega). Nie zmieniaj sensu tekstu. Tekst: ";
+        systemPrompt = "Przetłumacz poniższy tekst na slang młodzieżowy (możesz użyć słów takich jak: rel, sigma, ziomek). Nie zmieniaj sensu tekstu. Tekst: ";
     } else if (choice == 2) {
         systemPrompt = "Zmień styl poniższego tekstu na poetycki i artystyczny. Nie dodawaj faktów, których nie ma w oryginale. Tekst: ";
     }
