@@ -17,12 +17,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void handleSend(); 
+    void handleSend(); ///deklaracja funkcji reagującej na wciśnięcie przycisku
 
 private:
-    Ui::MainWindow *ui;
-    OllamaClient *client;
-    QString chatHistory;
+    Ui::MainWindow *ui; ///wskaźnik na int graficzny
+    OllamaClient *client; ///wysyłanie zapytan
+    QString chatHistory; 
     QTimer *statusTimer;
     int dotCount = 0;
 };

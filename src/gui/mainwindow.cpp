@@ -7,14 +7,16 @@
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    //połączenie z ollama lokalnie
     client = new OllamaClient("http://localhost:11434/api/generate");
+    /// migające kropki
     statusTimer = new QTimer(this);
     connect(statusTimer, &QTimer::timeout, this, [this]() {
         dotCount = (dotCount + 1) % 4; 
         QString dots = QString(".").repeated(dotCount);
         ui->statusLabel->setText("Bielik myśli" + dots);
     });
-    
+    /// łączenie przycisku wyślij z funkcja
     connect(ui->sendButton, &QPushButton::clicked, this, &MainWindow::handleSend);
 }
 MainWindow::~MainWindow() {
@@ -26,7 +28,7 @@ void MainWindow::handleSend() {
  
     QString textToProcess = ui->inputEdit->toPlainText().trimmed();
 
-    
+    ///jeśli nic nie jest wpisane wyświetla sie napis
     if (textToProcess.isEmpty() || textToProcess == "Wklej tekst do redakcji") {
         ui->statusLabel->setText("Błąd: Wpisz najpierw tekst!");
         return; 
@@ -37,7 +39,7 @@ void MainWindow::handleSend() {
     ui->statusLabel->setText("Bielik myśli");
     statusTimer->start(500); 
 
-  
+  ///system propmt 
     QString systemPrompt;
     int choice = ui->styleCombo->currentIndex();
 
@@ -52,7 +54,7 @@ void MainWindow::handleSend() {
    
     ui->outputEdit->clear();
 
-   
+   ///obsługa wielowątkowości
     QtConcurrent::run([this, systemPrompt, textToProcess]() {
         try {
             std::string response = client->sendRequest(systemPrompt.toStdString(), textToProcess.toStdString());
