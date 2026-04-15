@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     client = new OllamaClient("http://localhost:11434/api/generate");
     statusTimer = new QTimer(this);
     connect(statusTimer, &QTimer::timeout, this, [this]() {
-        dotCount = (dotCount + 1) % 4; // Cykl 0, 1, 2, 3
+        dotCount = (dotCount + 1) % 4; 
         QString dots = QString(".").repeated(dotCount);
         ui->statusLabel->setText("Bielik myśli" + dots);
     });
@@ -26,7 +26,7 @@ void MainWindow::handleSend() {
  
     QString textToProcess = ui->inputEdit->toPlainText().trimmed();
 
-    // 2. WALIDACJA: Jeśli pole jest puste lub zawiera domyślny placeholder
+    
     if (textToProcess.isEmpty() || textToProcess == "Wklej tekst do redakcji") {
         ui->statusLabel->setText("Błąd: Wpisz najpierw tekst!");
         return; 
@@ -35,7 +35,7 @@ void MainWindow::handleSend() {
    
     dotCount = 0;
     ui->statusLabel->setText("Bielik myśli");
-    statusTimer->start(500); // Kropka pojawia się co pół sekundy
+    statusTimer->start(500); 
 
   
     QString systemPrompt;
@@ -57,7 +57,7 @@ void MainWindow::handleSend() {
         try {
             std::string response = client->sendRequest(systemPrompt.toStdString(), textToProcess.toStdString());
             
-            // Powrót do wątku głównego (GUI)
+           
             QMetaObject::invokeMethod(this, [this, response]() {
                 statusTimer->stop(); 
                 ui->outputEdit->setPlainText(QString::fromStdString(response));
