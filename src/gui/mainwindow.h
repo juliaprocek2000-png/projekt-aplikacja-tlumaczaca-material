@@ -23,5 +23,7 @@ private:
     Ui::MainWindow *ui;
     OllamaClient *client;
     QString chatHistory;
+    QTimer *statusTimer;
+    int dotCount = 0;
 };
 #endif

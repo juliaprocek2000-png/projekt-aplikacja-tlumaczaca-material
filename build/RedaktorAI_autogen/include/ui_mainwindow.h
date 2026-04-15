@@ -31,6 +31,8 @@ public:
     QTextEdit *outputEdit;
     QLabel *label;
     QLabel *label_2;
+    QLabel *label_3;
+    QLabel *label_4;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -104,10 +106,10 @@ public:
 "font: 900 11pt \"Arial Black\";"));
         inputEdit = new QTextEdit(centralwidget);
         inputEdit->setObjectName("inputEdit");
-        inputEdit->setGeometry(QRect(30, 170, 741, 192));
+        inputEdit->setGeometry(QRect(30, 191, 741, 171));
         outputEdit = new QTextEdit(centralwidget);
         outputEdit->setObjectName("outputEdit");
-        outputEdit->setGeometry(QRect(30, 370, 741, 192));
+        outputEdit->setGeometry(QRect(30, 391, 741, 171));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(290, 20, 311, 71));
@@ -124,6 +126,12 @@ public:
 "font: 900 11pt \"Arial Black\";\n"
 "\n"
 "font-weight: 300;"));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(320, 170, 161, 16));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(370, 370, 91, 16));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -147,7 +155,7 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">Wklej tekst do redakcji</span></p></body></html>", nullptr));
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         outputEdit->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -155,9 +163,11 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">Odpowied\305\272 </span></p></body></html>", nullptr));
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Redaktor AI", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "wybierz styl odpowiedzi:", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Wpisz tekst do redakcji", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Odpowied\305\272", nullptr));
     } // retranslateUi
 
 };
