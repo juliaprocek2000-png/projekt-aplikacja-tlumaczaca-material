@@ -1,10 +1,10 @@
 #include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "ui_mainwindow.h"
 #include <QtConcurrent> 
 #include <QPushButton>
 #include <QComboBox>
 #include <QLabel>
-
+#include <QMessageBox>
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     //połączenie z ollama lokalnie
@@ -30,10 +30,10 @@ void MainWindow::handleSend() {
 
     ///jeśli nic nie jest wpisane wyświetla sie napis
     if (textToProcess.isEmpty() || textToProcess == "Wklej tekst do redakcji") {
-        ui->statusLabel->setText("Błąd!");
+        QMessageBox::warning(this, "Brak danych", "Musisz najpierw wpisać lub wkleić tekst do zredagowania!");
+        ui->statusLabel->setText("Oczekiwanie na tekst...");
         return; 
     }
-
    
     dotCount = 0;
     ui->statusLabel->setText("Bielik myśli");

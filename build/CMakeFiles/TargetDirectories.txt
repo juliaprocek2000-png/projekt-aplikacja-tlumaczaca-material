@@ -1,5 +1,3 @@
 C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/RedaktorAI.dir
-C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/edit_cache.dir
-C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/RedaktorAI_autogen_timestamp_deps.dir
-C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/RedaktorAI_autogen.dir
+C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/ZERO_CHECK.dir

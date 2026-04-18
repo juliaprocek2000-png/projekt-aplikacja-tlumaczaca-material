@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_RedaktorAI_FILE C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/Debug/RedaktorAI.exe)
+set(__QT_DEPLOY_TARGET_RedaktorAI_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_RedaktorAI_RUNTIME_DLLS C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Widgetsd.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Concurrentd.dll;C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/vcpkg/installed/x64-windows/debug/bin/cpr.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Guid.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Cored.dll;C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/vcpkg/installed/x64-windows/debug/bin/libcurl-d.dll)

@@ -1,0 +1,22 @@
+^C:\USERS\JULIA\DESKTOP\PROJEKT-APLIKACJA-TLUMACZACA-MATERIAL\BUILD\CMAKEFILES\E0AA1ACE1A61BFE00041B3D6BF0893C6\AUTOUIC_(CONFIG).STAMP.RULE
+setlocal
+cd C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JULIA\DESKTOP\PROJEKT-APLIKACJA-TLUMACZACA-MATERIAL\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material -BC:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build --check-stamp-file C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
