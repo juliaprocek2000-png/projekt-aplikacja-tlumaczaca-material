@@ -5,6 +5,17 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QMessageBox>
+/**
+ * @class MainWindow
+ * @brief Główna klasa interfejsu użytkownika aplikacji Redaktor AI.
+ * * Klasa zarządza interfejsem graficznym, obsługuje interakcje z użytkownikiem
+ * oraz koordynuje komunikację z modelem językowym w osobnym wątku.
+ */
+/**
+ * @brief Konstruktor klasy MainWindow.
+ * @param parent Wskaźnik na rodzica obiektu (domyślnie nullptr).
+ * Inicjalizuje UI, klienta Ollama oraz timer animacji statusu.
+ */
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     //połączenie z ollama lokalnie
@@ -19,11 +30,20 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     /// łączenie przycisku wyślij z funkcja
     connect(ui->sendButton, &QPushButton::clicked, this, &MainWindow::handleSend);
 }
+/**
+ * @brief Destruktor klasy MainWindow.
+ * Zwalnia pamięć zajmowaną przez klienta API oraz obiekty interfejsu.
+ */
 MainWindow::~MainWindow() {
     delete client; 
     delete ui;   
 }
-
+/**
+ * @brief Obsługuje proces wysyłania tekstu do redakcji.
+ * * Funkcja waliduje dane wejściowe, dobiera system prompt na podstawie wybranego stylu
+ * i uruchamia zapytanie do modelu AI w osobnym wątku przy użyciu QtConcurrent.
+ * Wykorzystuje QMetaObject::invokeMethod do bezpiecznej aktualizacji GUI.
+ */
 void MainWindow::handleSend() {
  
     QString textToProcess = ui->inputEdit->toPlainText().trimmed();
@@ -55,6 +75,7 @@ void MainWindow::handleSend() {
     ui->outputEdit->clear();
 
    ///obsługa wielowątkowości
+   /// @note Wykonanie zapytania w osobnym wątku, aby nie blokować GUI
     QtConcurrent::run([this, systemPrompt, textToProcess]() {
         try {
             std::string response = client->sendRequest(systemPrompt.toStdString(), textToProcess.toStdString());

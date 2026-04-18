@@ -1,0 +1,103 @@
+\doxysection{Ollama\+Client Class Reference}
+\hypertarget{class_ollama_client}{}\label{class_ollama_client}\index{OllamaClient@{OllamaClient}}
+
+
+obsługa api ollama  
+
+
+
+
+{\ttfamily \+\#include $<$Ollama\+Client.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ollama_client_a6ddb522b86a41bc1f030cedd3bb8b600}{Ollama\+Client}} (std::\+string api\+Url="{}http:\+/\+/\+localhost:\+11434/\+api/\+generate"{})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_ollama_client}{Ollama\+Client}. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_ollama_client_a15d76b103fffe8af7afbcb9b070034b9}{send\+Request}} (const std::\+string \&system\+Prompt, const std::\+string \&user\+Prompt)
+\begin{DoxyCompactList}\small\item\em Przesyła prompt do modelu językowego i zwraca odpowiedź. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+obsługa api ollama 
+
+Klasa odpowiedzialna za komunikację z lokalnym serwerem Ollama poprzez REST API.
+\begin{DoxyItemize}
+\item Klasa wykorzystuje bibliotekę CPR do wykonywania żądań HTTP i nlohmann/\+json do przetwarzania danych w formacie JSON. Umożliwia wysyłanie zapytań do modelu Bielik\+[cite:\+ 7, 13, 19]\+. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_ollama_client_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ollama_client_a6ddb522b86a41bc1f030cedd3bb8b600}\index{OllamaClient@{OllamaClient}!OllamaClient@{OllamaClient}}
+\index{OllamaClient@{OllamaClient}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{OllamaClient()}{OllamaClient()}}
+{\footnotesize\ttfamily \label{class_ollama_client_a6ddb522b86a41bc1f030cedd3bb8b600} 
+Ollama\+Client::\+\+Ollama\+Client (\begin{DoxyParamCaption}\item[{std::\+string}]{api\+Url}{ = {\ttfamily "{}http:\+/\+/\+localhost:\+11434/\+api/\+generate"{}}}\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_ollama_client}{Ollama\+Client}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em api\+Url} & Adres URL punktu końcowego API (domyślnie \href{http://localhost:11434/api/generate}{\texttt{http:\+/\+/\+localhost:\+11434/\+api/\+generate}})\+[cite:\+ 19]\+.\\
+\hline
+{\em api\+Url} & Adres URL punktu końcowego API (np. \href{http://localhost:11434/api/generate}{\texttt{http:\+/\+/\+localhost:\+11434/\+api/\+generate}}). \+[cite:\+ 19]\+ \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ollama_client_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ollama_client_a15d76b103fffe8af7afbcb9b070034b9}\index{OllamaClient@{OllamaClient}!sendRequest@{sendRequest}}
+\index{sendRequest@{sendRequest}!OllamaClient@{OllamaClient}}
+\doxysubsubsection{\texorpdfstring{sendRequest()}{sendRequest()}}
+{\footnotesize\ttfamily \label{class_ollama_client_a15d76b103fffe8af7afbcb9b070034b9} 
+std::\+string Ollama\+Client::\+send\+Request (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{system\+Prompt}{, }\item[{const std::\+string \&}]{user\+Prompt}{}\end{DoxyParamCaption})}
+
+
+
+Przesyła prompt do modelu językowego i zwraca odpowiedź. 
+
+Wysyła zapytanie do modelu językowego i odbiera odpowiedź.
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em system\+Prompt} & Określenie kontekstu i roli modelu (system prompt)\+[cite:\+ 10, 23]\+. \\
+\hline
+{\em user\+Prompt} & Tekst wprowadzony przez użytkownika do przetworzenia (user prompt)\+[cite:\+ 10, 24]\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::\+string Wygenerowana odpowiedź modelu lub komunikat o błędzie\+[cite:\+ 33, 34]\+.
+\end{DoxyReturn}
+
+\item Funkcja buduje obiekt JSON zawierający model, system prompt i user prompt, \+[cite:\+ 22, 23, 24]\+ a następnie przesyła go synchronicznie do serwera Ollama. \+[cite:\+ 13, 25]\+
+\item 
+\begin{DoxyParams}{Parameters}
+{\em system\+Prompt} & Kontekst i rola określająca zachowanie modelu. \+[cite:\+ 10]\+ \\
+\hline
+{\em user\+Prompt} & Treść zapytania lub tekst dostarczony przez użytkownika. \+[cite:\+ 10]\+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std::\+string Zredagowany tekst z modelu lub komunikat o błędzie. \+[cite:\+ 33, 34]\+ 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\begin{DoxyNote}{Note}
+Obsługa wyjątków zapewnia odporność na błędy sieciowe.
+\end{DoxyNote}
+biblioteka m=nlohmann/\+json
+
+inf ze dane w formacie json
+
+czy ollama działa
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+network/\+\doxymbox{\hyperlink{_ollama_client_8h}{Ollama\+Client.\+h}}\item 
+src/\+network/\+\doxymbox{\hyperlink{_ollama_client_8cpp}{Ollama\+Client.\+cpp}}\end{DoxyCompactItemize}

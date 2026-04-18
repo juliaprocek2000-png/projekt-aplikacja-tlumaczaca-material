@@ -1,0 +1,75 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Główna klasa interfejsu użytkownika aplikacji Redaktor AI.  
+
+
+
+
+{\ttfamily \+\#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_main_window}{Main\+Window}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\texorpdfstring{$\sim$}{\string~}\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_main_window}{Main\+Window}. Zwalnia zasoby zajmowane przez interfejs i klienta API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Główna klasa interfejsu użytkownika aplikacji Redaktor AI. 
+
+Klasa odpowiedzialna za główne okno aplikacji Redaktor AI.
+
+
+\begin{DoxyItemize}
+\item Klasa zarządza interfejsem graficznym, obsługuje interakcje z użytkownikiem oraz koordynuje komunikację z modelem językowym w osobnym wątku.
+\item Zarządza interfejsem użytkownika, pobiera dane wejściowe i wyświetla zredagowany tekst otrzymany z modelu językowego. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_main_window_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+Main\+Window::\+\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_main_window}{Main\+Window}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Wskaźnik na obiekt rodzica (domyślnie nullptr).\\
+\hline
+{\em parent} & Wskaźnik na rodzica obiektu (domyślnie nullptr). Inicjalizuje UI, klienta Ollama oraz timer animacji statusu. \\
+\hline
+\end{DoxyParams}
+migające kropki
+
+łączenie przycisku wyślij z funkcja\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\index{MainWindow@{MainWindow}!````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}}
+\index{````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MainWindow()}{\string~MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7} 
+Main\+Window::\+\texorpdfstring{$\sim$}{\string~}\+Main\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{class_main_window}{Main\+Window}. Zwalnia zasoby zajmowane przez interfejs i klienta API. 
+
+Destruktor klasy \doxylink{class_main_window}{Main\+Window}. Zwalnia pamięć zajmowaną przez klienta API oraz obiekty interfejsu. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+gui/\+\doxymbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+src/\+gui/\+\doxymbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

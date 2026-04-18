@@ -1,3 +1,8 @@
+/**
+ * @file OllamaClient.cpp
+ * @brief Implementacja klasy klienta do komunikacji z modelem językowym Ollama.
+ * * Zawiera logikę wysyłania żądań HTTP POST do lokalnego serwera API.
+ */
 #include "OllamaClient.h"
 #include <cpr/cpr.h>           
 #include <nlohmann/json.hpp>    
@@ -5,11 +10,21 @@
 #include <string>
 /// komunikacja z ollama
 using json = nlohmann::json;
-
+/**
+ * @brief Konstruktor klasy OllamaClient.
+ * @param apiUrl Adres URL punktu końcowego API (np. http://localhost:11434/api/generate). [cite: 19]
+ */
 OllamaClient::OllamaClient(std::string apiUrl) : apiUrl(apiUrl) {}
-
+/**
+ * @brief Wysyła zapytanie do modelu językowego i odbiera odpowiedź.
+ * * Funkcja buduje obiekt JSON zawierający model, system prompt i user prompt, [cite: 22, 23, 24]
+ * a następnie przesyła go synchronicznie do serwera Ollama. [cite: 13, 25]
+ * * @param systemPrompt Kontekst i rola określająca zachowanie modelu. [cite: 10]
+ * @param userPrompt Treść zapytania lub tekst dostarczony przez użytkownika. [cite: 10]
+ * @return std::string Zredagowany tekst z modelu lub komunikat o błędzie. [cite: 33, 34]
+ */
 std::string OllamaClient::sendRequest(const std::string& systemPrompt, const std::string& userPrompt) {
-    ///obsługa błedów systemowych
+    /// @note Obsługa wyjątków zapewnia odporność na błędy sieciowe.
     try {
        /// biblioteka m=nlohmann/json
         json requestBody = {
