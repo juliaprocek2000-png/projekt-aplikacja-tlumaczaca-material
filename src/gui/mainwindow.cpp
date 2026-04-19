@@ -1,3 +1,10 @@
+/**
+ * @file mainwindow.cpp
+ * @brief Implementacja klasy MainWindow, głównego okna aplikacji Redaktor AI.
+ * * Klasa zarządza interfejsem użytkownika, obsługuje interakcje z użytkownikiem
+ * 
+ */
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QtConcurrent> 

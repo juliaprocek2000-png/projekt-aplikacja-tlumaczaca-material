@@ -1,3 +1,9 @@
+/**
+ * @file mainwindow.h
+ * @brief Definicja klasy MainWindow, głównego okna aplikacji Redaktor AI.
+ * * Klasa zarządza interfejsem użytkownika.
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

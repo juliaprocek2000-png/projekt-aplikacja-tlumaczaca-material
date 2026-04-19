@@ -1,3 +1,8 @@
+/**
+ * @file OllamaClient.h
+ * @brief Definicja klasy OllamaClient do komunikacji z modelem językowym Ollama.
+ * * Klasa umożliwia wysyłanie zapytań do lokalnego serwera API Ollama i odbieranie odpowiedzi.
+ */
 #ifndef OLLAMACLIENT_H
 #define OLLAMACLIENT_H
 
