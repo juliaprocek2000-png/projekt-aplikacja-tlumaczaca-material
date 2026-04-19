@@ -28,3 +28,18 @@ STRUKTURA PROJEKTU:
 /vcpkg - Zarządzanie zewnętrznymi bibliotekami
 /build - Pliki binarne i biblioteki DLL
 /doc - Dokumentacja Doxygen
+
+TESTY JEDNOSTKOWE:
+
+*Lokalizacja:
+Pliki testowe znajdują się w dedykowanym folderze `/tests`.
+
+*Zakres testów:
+1. testConnectionError – weryfikuje poprawność obsługi błędów w przypadku braku połączenia z serwerem Ollama (wymaganie pkt 27).
+2. testEmptyInput – sprawdza mechanizmy walidacji przy próbie przesłania pustych danych do modelu (wymaganie pkt 32).
+
+*Instrukcja uruchomienia testów:
+Aby uruchomić testy, należy:
+1. Skompilować projekt (cel UnitTests).
+2. Wejść do folderu budowania: `cd build/Debug`.
+3. Uruchomić plik wykonywalny: `./UnitTests.exe`.
