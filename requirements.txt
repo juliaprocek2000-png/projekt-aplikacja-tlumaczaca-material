@@ -8,7 +8,7 @@ Wymagania systemowe i biblioteki:
 2. Framework i biblioteki (zainstalowane przez vcpkg/Qt):
    - Qt 6.11.0 (Core, Gui, Widgets, Concurrent).
    - CPR (C++ Requests) - do obsługi protokołu HTTP.
-   - nlohmann_json - do parsowania odpowiedzi z API.
+   - nlohmann_json - do przekształcania odpowiedzi z API.
    - OpenSSL (wymagane przez libcurl/CPR).
 
 3. Narzędzia zewnętrzne:

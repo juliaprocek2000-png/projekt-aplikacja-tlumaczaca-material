@@ -4,7 +4,7 @@ AUTOR: Julia Procek
 
 OPIS PROJEKTU:
 Aplikacja służąca do automatycznej redakcji i zmiany stylu 
-tekstu przy użyciu lokalnego modelu językowego przez API Ollama.
+tekstu przy użyciu lokalnego modelu językowego przez REST API programu Ollama.
 Program pozwala na transformację tekstu w trzech wariantach:
 1. Styl dziecięcy.
 2. Styl młodzieżowy.
@@ -12,7 +12,7 @@ Program pozwala na transformację tekstu w trzech wariantach:
 
 FUNKCJONALNOŚCI:
 - Komunikacja z modelem LLM poprzez REST API (biblioteka CPR).
-- Przetwarzanie asynchroniczne (QtConcurrent) - GUI nie zamarza podczas pracy AI.
+- Podejście wielowątkowe - GUI nie zamarza podczas pracy AI.
 - Personalizowany interfejs graficzny (Qt Widgets + CSS).
 - Obsługa błędów połączenia i walidacja danych wejściowych.
 
@@ -23,8 +23,8 @@ INSTRUKCJA URUCHOMIENIA:
 4. Uruchom plik RedaktorAI.exe.
 
 STRUKTURA PROJEKTU:
-/src /gui- Kod źródłowy (MainWindow)
-/src /network - Kod źródłowy (OllamaClient)
-/vcpkg - Zarządzanie bibliotekami (CPR, nlohmann_json)
+/src /gui- Obsługa interfejsu użytkownika (MainWindow)
+/src /network - Logika komunikacji API (OllamaClient)
+/vcpkg - Zarządzanie zewnętrznymi bibliotekami
 /build - Pliki binarne i biblioteki DLL
 /doc - Dokumentacja Doxygen
