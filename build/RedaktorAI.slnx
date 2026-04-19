@@ -9,6 +9,14 @@
 	</Configurations>
 	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c7c39147-488f-30ae-bb22-635b50f24a8b" DefaultStartup="true">
 		<BuildDependency Project="RedaktorAI.vcxproj"/>
+		<BuildDependency Project="UnitTests.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="RUN_TESTS.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="16592e65-a44b-37a3-86c6-3e716a2d0eaa">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<Build Solution="Debug|*" Project="false"/>
 		<Build Solution="Release|*" Project="false"/>
@@ -16,6 +24,9 @@
 		<Build Solution="RelWithDebInfo|*" Project="false"/>
 	</Project>
 	<Project Path="RedaktorAI.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="caa42966-9c18-3344-9656-18c7931eec5f">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="UnitTests.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="d7596fc3-5e34-3fce-ac03-31f040c52065">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="0c97f5e9-feb6-3b60-ab6b-81a9239e2412"/>

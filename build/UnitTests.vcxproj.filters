@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\tests\test_ollama.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\src\network\OllamaClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\include_Debug\src\gui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\include_Release\src\gui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\include_MinSizeRel\src\gui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\include_RelWithDebInfo\src\gui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\CMakeFiles\8fee1db61f80c56e24a5289dcaea3a35\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\autouic_Debug.stamp" />
+    <None Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\autouic_Release.stamp" />
+    <None Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\UnitTests_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A7717983-A3E7-37AF-864B-AC5B561D3AE7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{22235812-F427-3578-A51D-F213E96C4C79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8347AD71-F3E5-317B-BE73-468FE47D9538}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

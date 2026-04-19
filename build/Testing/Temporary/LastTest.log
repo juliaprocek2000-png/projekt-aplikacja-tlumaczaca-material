@@ -1,0 +1,18 @@
+Start testing: Apr 19 14:05 Œrodkowoeuropejski czas letni
+----------------------------------------------------------
+1/1 Testing: OllamaConnectionTest
+1/1 Test: OllamaConnectionTest
+Command: "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/Debug/UnitTests.exe"
+Directory: C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build
+"OllamaConnectionTest" start time: Apr 19 14:05 Œrodkowoeuropejski czas letni
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  25.92 sec
+----------------------------------------------------------
+Test Failed.
+"OllamaConnectionTest" end time: Apr 19 14:06 Œrodkowoeuropejski czas letni
+"OllamaConnectionTest" time elapsed: 00:00:25
+----------------------------------------------------------
+
+End testing: Apr 19 14:06 Œrodkowoeuropejski czas letni

@@ -226,6 +226,17 @@ C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTa
 C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake
 C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake
 C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestConfig.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestConfigVersion.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestDependencies.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestTargets-debug.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestTargets-relwithdebinfo.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestTargets.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestTargetsPrecheck.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/Qt6TestVersionlessAliasTargets.cmake
+C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Test/QtTestProperties.cmake
 C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake
 C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake
 C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake

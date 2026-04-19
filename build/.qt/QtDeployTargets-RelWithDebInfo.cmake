@@ -1,3 +1,6 @@
 set(__QT_DEPLOY_TARGET_RedaktorAI_FILE C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/RelWithDebInfo/RedaktorAI.exe)
 set(__QT_DEPLOY_TARGET_RedaktorAI_TYPE EXECUTABLE)
 set(__QT_DEPLOY_TARGET_RedaktorAI_RUNTIME_DLLS C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Widgets.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Concurrent.dll;C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/vcpkg/installed/x64-windows/bin/cpr.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Gui.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Core.dll;C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/vcpkg/installed/x64-windows/bin/libcurl.dll)
+set(__QT_DEPLOY_TARGET_UnitTests_FILE C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/RelWithDebInfo/UnitTests.exe)
+set(__QT_DEPLOY_TARGET_UnitTests_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_UnitTests_RUNTIME_DLLS C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Test.dll;C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/vcpkg/installed/x64-windows/bin/cpr.dll;C:/Users/Julia/Desktop/qt/6.11.0/msvc2022_64/bin/Qt6Core.dll;C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/vcpkg/installed/x64-windows/bin/libcurl.dll)

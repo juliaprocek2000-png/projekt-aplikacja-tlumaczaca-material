@@ -24,6 +24,10 @@ OllamaClient::OllamaClient(std::string apiUrl) : apiUrl(apiUrl) {}
  * @return std::string Zredagowany tekst z modelu lub komunikat o błędzie. [cite: 33, 34]
  */
 std::string OllamaClient::sendRequest(const std::string& systemPrompt, const std::string& userPrompt) {
+    
+    if (systemPrompt.empty() && userPrompt.empty()) {
+        return "Blad: Brak danych do przetworzenia.";
+    }
     /// @note Obsługa wyjątków zapewnia odporność na błędy sieciowe.
     try {
        /// biblioteka m=nlohmann/json

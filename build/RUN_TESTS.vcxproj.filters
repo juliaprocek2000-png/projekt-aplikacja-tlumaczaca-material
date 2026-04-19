@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Julia\Desktop\projekt-aplikacja-tlumaczaca-material\build\CMakeFiles\43545cbc4394632ae1b5be5e9af9ab0b\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A7717983-A3E7-37AF-864B-AC5B561D3AE7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
