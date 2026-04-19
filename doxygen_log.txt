@@ -101,7 +101,7 @@ Generating docs for compound MainWindow...
 'epstopdf' is not recognized as an internal or external command,
 operable program or batch file.
 error: Problems running epstopdf. Check your TeX installation!
-C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/src/gui/mainwindow.cpp:30: warning: argument parent from the argument list of MainWindow::MainWindow has multiple @param documentation sections
+C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/src/gui/mainwindow.cpp:37: warning: argument parent from the argument list of MainWindow::MainWindow has multiple @param documentation sections
 Generating docs for compound OllamaClient...
 C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/src/network/OllamaClient.cpp:15: warning: argument apiUrl from the argument list of OllamaClient::OllamaClient has multiple @param documentation sections
 C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/src/network/OllamaClient.cpp:19: warning: argument systemPrompt from the argument list of OllamaClient::sendRequest has multiple @param documentation sections
