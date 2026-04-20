@@ -46,30 +46,24 @@ MainWindow::~MainWindow() {
     delete ui;   
 }
 /**
- * @brief Obsługuje proces wysyłania tekstu do redakcji.
+ * @brief Przesyłanie promptu do modelu i odbieranie odpowiedzi.
+ * 
  * * Funkcja waliduje dane wejściowe, dobiera system prompt na podstawie wybranego stylu
- * i uruchamia zapytanie do modelu AI w osobnym wątku przy użyciu QtConcurrent.
- * Wykorzystuje QMetaObject::invokeMethod do bezpiecznej aktualizacji GUI.
+ * i uruchamia zapytanie do modelu AI w osobnym wątku przy użyciu QThread i Worker.
+ * * Odbiera odpowiedź i aktualizuje interfejs użytkownika, zapewniając płynność działania aplikacji.
+ 
  */
 void MainWindow::handleSend() {
- 
+    // walidacja danych wejściowych
     QString textToProcess = ui->inputEdit->toPlainText().trimmed();
-
-    ///jeśli nic nie jest wpisane wyświetla sie napis
     if (textToProcess.isEmpty() || textToProcess == "Wklej tekst do redakcji") {
-        QMessageBox::warning(this, "Brak danych", "Musisz najpierw wpisać lub wkleić tekst do zredagowania!");
-        ui->statusLabel->setText("Oczekiwanie na tekst...");
+        QMessageBox::warning(this, "Brak danych", "Wpisz lub wklej tekst do redakcji!");
         return; 
     }
-   
-    dotCount = 0;
-    ui->statusLabel->setText("Bielik myśli");
-    statusTimer->start(500); 
 
-  ///system propmt 
+    // system prompt
     QString systemPrompt;
     int choice = ui->styleCombo->currentIndex();
-
     if (choice == 0) {
         systemPrompt = "Jesteś edytorem tekstów dla dzieci. Twoim zadaniem jest uproszczenie PONIŻSZEGO tekstu. Nie wymyślaj nowych historii. Jeśli tekst wejściowy jest krótki, Twoja odpowiedź też ma być krótka. Nie zmieniaj sensu tekstu. wygeneruj tekst podobnej długości co dostarczony ci fragment. Tekst do uproszczenia: ";
     } else if (choice == 1) {
@@ -78,26 +72,39 @@ void MainWindow::handleSend() {
         systemPrompt = "Zmień styl poniższego tekstu na poetycki i artystyczny. Nie zmieniaj sensu tekstu. wygeneruj tekst podobnej długości co dostarczony ci fragment. Tekst: ";
     }
     
-   
+    // animacja kropek
+    ui->statusLabel->setText("Bielik myśli");
+    statusTimer->start(500);
     ui->outputEdit->clear();
 
-   ///obsługa wielowątkowości
-   /// @note Wykonanie zapytania w osobnym wątku, aby nie blokować GUI
-    QtConcurrent::run([this, systemPrompt, textToProcess]() {
-        try {
-            std::string response = client->sendRequest(systemPrompt.toStdString(), textToProcess.toStdString());
-            
-           
-            QMetaObject::invokeMethod(this, [this, response]() {
-                statusTimer->stop(); 
-                ui->outputEdit->setPlainText(QString::fromStdString(response));
-                ui->statusLabel->setText("Gotowe!");
-            });
-        } catch (...) {
-            QMetaObject::invokeMethod(this, [this]() {
-                statusTimer->stop(); 
-                ui->statusLabel->setText("Błąd połączenia!");
-            });
-        }
+    // wielowątkowość
+    QThread* thread = new QThread;
+    Worker* worker = new Worker;
+    worker->moveToThread(thread);
+
+    
+    connect(thread, &QThread::started, [=]() {
+        worker->doWork(client, systemPrompt, textToProcess);
     });
+
+    // odbiór wyniku i aktualizacja gui
+    connect(worker, &Worker::resultReady, this, [=](const QString &result) {
+        ui->outputEdit->setPlainText(result);
+        ui->statusLabel->setText("Gotowe!");
+        statusTimer->stop();
+        thread->quit();
+    });
+
+    // obsługa błędów
+    connect(worker, &Worker::errorOccurred, this, [=]() {
+        ui->statusLabel->setText("Błąd połączenia!");
+        statusTimer->stop();
+        thread->quit();
+    });
+
+    // sprzątanie wątku po zakończeniu
+    connect(thread, &QThread::finished, worker, &QObject::deleteLater);
+    connect(thread, &QThread::finished, thread, &QObject::deleteLater);
+
+    thread->start(); // uruchomienie wątku
 }

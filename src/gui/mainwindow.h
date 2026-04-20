@@ -14,6 +14,24 @@
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+class Worker : public QObject {
+    Q_OBJECT
+public slots:
+    // funkcja wykonująca zapytanie do modelu w osobnym wątku
+    void doWork(OllamaClient* client, const QString& systemPrompt, const QString& userPrompt) {
+        try {
+            //  wysyłanie zapytania do modelu i odbieranie odpowiedzi
+            std::string response = client->sendRequest(systemPrompt.toStdString(), userPrompt.toStdString());
+            emit resultReady(QString::fromStdString(response));
+        } catch (...) {
+            emit errorOccurred();
+        }
+    }
+signals:
+    void resultReady(const QString &result);
+    void errorOccurred();
+};
 /**
  * @class MainWindow
  * @brief Klasa odpowiedzialna za główne okno aplikacji Redaktor AI.
@@ -50,4 +68,6 @@ private:
     QTimer *statusTimer; ///< Timer odpowiedzialny za animację kropek.
     int dotCount = 0; ///< Licznik kropek w animacji statusu.
 };
+
+
 #endif
