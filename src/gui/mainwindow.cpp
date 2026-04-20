@@ -65,9 +65,9 @@ void MainWindow::handleSend() {
     QString systemPrompt;
     int choice = ui->styleCombo->currentIndex();
     if (choice == 0) {
-        systemPrompt = "Jesteś edytorem tekstów dla dzieci. Twoim zadaniem jest uproszczenie PONIŻSZEGO tekstu. Nie wymyślaj nowych historii. Jeśli tekst wejściowy jest krótki, Twoja odpowiedź też ma być krótka. Nie zmieniaj sensu tekstu. wygeneruj tekst podobnej długości co dostarczony ci fragment. Tekst do uproszczenia: ";
+        systemPrompt = "Jesteś edytorem tekstów dla dzieci. Twoim zadaniem jest uproszczenie poniższego tekstu. Tekst ma być napisany językiem zrozumiałym dla dzieci.Nie wymyślaj nowych historii. Jeśli tekst wejściowy jest krótki, Twoja odpowiedź też ma być krótka. Nie zmieniaj sensu tekstu. Nie dodawaj żadnych informacji. wygeneruj tekst podobnej długości co dostarczony ci fragment. Tekst do uproszczenia: ";
     } else if (choice == 1) {
-        systemPrompt = "Przetłumacz poniższy tekst na slang młodzieżowy (możesz, jeśli pasują, użyć słów takich jak: rel, sigma, ziomek). Nie zmieniaj sensu tekstu. wygeneruj tekst podobnej długości co dostarczony ci fragment. Tekst: ";
+        systemPrompt = "Jesteś edytorem tekstu. Przetłumacz poniższy tekst na slang młodzieżowy, używaj słów, których używa młodzież. Nie zmieniaj sensu tekstu. wygeneruj tekst podobnej długości co dostarczony ci fragment. Na końcu nie zadawaj pytań. Tekst: ";
     } else if (choice == 2) {
         systemPrompt = "Zmień styl poniższego tekstu na poetycki i artystyczny. Nie zmieniaj sensu tekstu. wygeneruj tekst podobnej długości co dostarczony ci fragment. Tekst: ";
     }
