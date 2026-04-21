@@ -30,7 +30,7 @@ std::string OllamaClient::sendRequest(const std::string& systemPrompt, const std
     }
     /// @note Obsługa wyjątków zapewnia odporność na błędy sieciowe.
     try {
-       /// biblioteka m=nlohmann/json
+       /// biblioteka 
         json requestBody = {
             {"model", "speakleash/bielik-11b-v2.3-instruct:q4_k_m"},        
             {"system", systemPrompt},   
