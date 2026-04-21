@@ -12,16 +12,16 @@
 using json = nlohmann::json;
 /**
  * @brief Konstruktor klasy OllamaClient.
- * @param apiUrl Adres URL punktu końcowego API (np. http://localhost:11434/api/generate). [cite: 19]
+ * @param apiUrl Adres URL punktu końcowego API (np. http://localhost:11434/api/generate). 
  */
 OllamaClient::OllamaClient(std::string apiUrl) : apiUrl(apiUrl) {}
 /**
  * @brief Wysyła zapytanie do modelu językowego i odbiera odpowiedź.
- * * Funkcja buduje obiekt JSON zawierający model, system prompt i user prompt, [cite: 22, 23, 24]
- * a następnie przesyła go synchronicznie do serwera Ollama. [cite: 13, 25]
- * * @param systemPrompt Kontekst i rola określająca zachowanie modelu. [cite: 10]
- * @param userPrompt Treść zapytania lub tekst dostarczony przez użytkownika. [cite: 10]
- * @return std::string Zredagowany tekst z modelu lub komunikat o błędzie. [cite: 33, 34]
+ * * Funkcja buduje obiekt JSON zawierający model, system prompt i user prompt,
+ * a następnie przesyła go do serwera Ollama. 
+ * * @param systemPrompt Kontekst i rola określająca zachowanie modelu. 
+ * @param userPrompt Treść zapytania lub tekst dostarczony przez użytkownika. 
+ * @return std::string Zredagowany tekst z modelu lub komunikat o błędzie. 
  */
 std::string OllamaClient::sendRequest(const std::string& systemPrompt, const std::string& userPrompt) {
     
