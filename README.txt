@@ -31,14 +31,14 @@ STRUKTURA PROJEKTU:
 
 TESTY JEDNOSTKOWE:
 
-*Lokalizacja:
+-Lokalizacja:
 Pliki testowe znajdują się w dedykowanym folderze `/tests`.
 
-*Zakres testów:
+-Zakres testów:
 1. testConnectionError – weryfikuje poprawność obsługi błędów w przypadku braku połączenia z serwerem Ollama (wymaganie pkt 27).
 2. testEmptyInput – sprawdza mechanizmy walidacji przy próbie przesłania pustych danych do modelu (wymaganie pkt 32).
 
-*Instrukcja uruchomienia testów:
+-Instrukcja uruchomienia testów:
 Aby uruchomić testy, należy:
 1. Skompilować projekt (cel UnitTests).
 2. Wejść do folderu budowania: `cd build/Debug`.
