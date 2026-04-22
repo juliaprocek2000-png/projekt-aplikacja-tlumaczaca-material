@@ -82,7 +82,7 @@ void MainWindow::handleSend() {
     Worker* worker = new Worker;
     worker->moveToThread(thread);
 
-    
+    // wywołanie funkcji doWork i przekazanie danych
     connect(thread, &QThread::started, [=]() {
         worker->doWork(client, systemPrompt, textToProcess);
     });
