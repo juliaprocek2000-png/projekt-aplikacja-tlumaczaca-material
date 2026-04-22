@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/UnitTests.exe"
+			"path" : "MinSizeRel/UnitTests.exe"
 		},
 		{
-			"path" : "Release/UnitTests.pdb"
+			"path" : "MinSizeRel/UnitTests.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -50,7 +50,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 51,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -62,13 +62,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 59,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 48,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
@@ -246,7 +246,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 55,
+				"line" : 54,
 				"parent" : 0
 			}
 		]
@@ -277,7 +277,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -std:c++17 -MD"
 				},
 				{
 					"backtrace" : 3,
@@ -343,7 +343,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/UnitTests_autogen/include_Release"
+					"path" : "C:/Users/Julia/Desktop/projekt-aplikacja-tlumaczaca-material/build/UnitTests_autogen/include_MinSizeRel"
 				},
 				{
 					"backtrace" : 37,
@@ -405,7 +405,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
@@ -533,7 +533,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/UnitTests_autogen/mocs_compilation_Release.cpp",
+			"path" : "build/UnitTests_autogen/mocs_compilation_MinSizeRel.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -551,13 +551,13 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/UnitTests_autogen/include_Release/src/gui/ui_mainwindow.h",
+			"path" : "build/UnitTests_autogen/include_MinSizeRel/src/gui/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/UnitTests_autogen/autouic_Release.stamp",
+			"path" : "build/UnitTests_autogen/autouic_MinSizeRel.stamp",
 			"sourceGroupIndex" : 2
 		},
 		{

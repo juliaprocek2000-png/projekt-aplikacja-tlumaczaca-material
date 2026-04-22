@@ -50,7 +50,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 51,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -62,13 +62,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 59,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 48,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
@@ -246,7 +246,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 55,
+				"line" : 54,
 				"parent" : 0
 			}
 		]

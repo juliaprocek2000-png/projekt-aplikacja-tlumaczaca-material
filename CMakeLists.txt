@@ -41,26 +41,24 @@ target_link_libraries(RedaktorAI PRIVATE
     cpr::cpr 
     nlohmann_json::nlohmann_json
 )
-# Włączenie obsługi testów w projekcie [cite: 37]
+
 enable_testing()
 
-# Znalezienie modułu Test dla Qt
 find_package(Qt6 REQUIRED COMPONENTS Test)
 
-# Tworzenie pliku wykonywalnego dla testów
+
 add_executable(UnitTests 
     tests/test_ollama.cpp 
-    src/network/OllamaClient.cpp # Testujemy tę klasę
+    src/network/OllamaClient.cpp 
 )
 target_include_directories(UnitTests PRIVATE 
     src/network
 )
-# Linkowanie bibliotek (CPR i JSON są niezbędne dla OllamaClient)
+
 target_link_libraries(UnitTests 
     Qt6::Test 
     cpr::cpr 
     nlohmann_json::nlohmann_json
 )
 
-# Rejestracja testu w systemie 
 add_test(NAME OllamaConnectionTest COMMAND UnitTests)
